@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.title{
+    color:darkred!important;
+    margin-left: 15px!important;
+     margin-bottom: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+
+    text-align: center;
+    margin-top: 50px;
+
+    }
+    .content 
+    {
+        margin:0 auto;
+    }
+    .btnadd
+    {
+        margin: 15px!important;
+
+    }

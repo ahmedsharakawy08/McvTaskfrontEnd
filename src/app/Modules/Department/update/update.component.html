@@ -1,0 +1,26 @@
+
+    <div title class="title">
+      <label class="col-lg-3 col-12 m-0"> Edit Department </label>
+    </div>
+    <div class="col-6 content" content>
+      <form [formGroup]="editForm" (submit)="UpdateDepartment()">
+        <mat-form-field   class="col-lg-12" [appearance]="'outline'">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="Name" placeholder="name" />
+          <mat-error>Name is required</mat-error>
+        </mat-form-field>
+ 
+        <div  class=" title"  >
+          <button
+            type="submit"
+            [disabled]="!editForm.valid"
+            class="w-20"
+            mat-raised-button
+            [color]="'primary'"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+

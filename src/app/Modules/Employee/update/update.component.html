@@ -1,0 +1,54 @@
+<app-page-template>
+    <div title class="title">
+      <label > Edit Employee </label>
+    </div>
+    <div    class="col-6 content" content>
+      <form [formGroup]="editForm" (submit)="updateEmployee()">
+        <mat-form-field class="col-lg-6" [appearance]="'outline'">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" placeholder="name" />
+          <mat-error>Name is required</mat-error>
+        </mat-form-field>
+        
+    <mat-form-field class="col-lg-6">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="title" />
+        <mat-error>Title is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="col-lg-6">
+      <mat-label>Employee Number</mat-label>
+      <input matInput formControlName="empNumber" placeholder="empNumber" />
+      <mat-error>Employee Number is required</mat-error>
+    </mat-form-field>
+
+
+
+
+
+       
+    <mat-form-field class="col-lg-6" [appearance]="'outline'">
+        <mat-label>Department</mat-label>
+        <mat-select formControlName="deptId">
+          <mat-option *ngFor="let Department of Departments"  [value]="Department.id">{{
+            Department.name
+          }}</mat-option>
+        </mat-select>
+    
+      </mat-form-field>
+        <div  class=" title" >
+          <button 
+            type="submit"
+            [disabled]="!editForm.valid" 
+             
+            class="w-30"
+            mat-raised-button
+            [color]="'primary'"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+</app-page-template>

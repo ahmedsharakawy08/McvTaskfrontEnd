@@ -1,0 +1,53 @@
+.drawer {
+    position: fixed;
+    height: 100vh;
+    min-width: 25%;
+
+  }
+  .drawer .header {
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+  }
+  .drawer .contents {
+    padding: 16px;
+  }
+  
+  button
+  {
+      font-weight: bold;
+      font-size: 15px;
+  }
+
+  
+  .main.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+  }
+  
+  .main.contents {
+    min-height: 100vh;
+    margin-top: 64px; /* height of header */
+    padding: 16px;
+  }
+  
+  .main.footer {
+    position: fixed;
+
+    bottom: 0;
+    width: 100%;
+  }
+  
+  
+
+ mat-drawer-container{
+    height: 100vh;
+  }
+  
+  mat-drawer {
+    width: 200px;
+  }
+  

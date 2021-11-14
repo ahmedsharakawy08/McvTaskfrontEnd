@@ -1,0 +1,12 @@
+.sticky-title {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 1em 0.5em;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 0.3em 0.1em;
+}
+
+.dummy-title{
+  @extend .sticky-title;
+  position: relative;
+}

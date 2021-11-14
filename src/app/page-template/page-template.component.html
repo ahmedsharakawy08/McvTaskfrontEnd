@@ -1,0 +1,8 @@
+<div (scroll)="updateHeader($event)" class="pg-temp">
+  <div #title class="pg-title">
+    <ng-content class="pg-title" select="[title]"></ng-content>
+  </div>
+  <div #content>
+    <ng-content class="pg-contet" select="[content]"></ng-content>
+  </div>
+</div>

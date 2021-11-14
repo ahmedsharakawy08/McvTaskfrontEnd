@@ -1,0 +1,27 @@
+
+  <div title class="title">
+    <label > Add Department </label>
+  </div>
+  <div class="col-6 content" content>
+    <form [formGroup]="addForm" (submit)="AddDepartment()">
+      <mat-form-field  class="col-12" style="color:black"[appearance]="'outline'">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="Name" placeholder="name" />
+        <mat-error>Name is required</mat-error>
+      </mat-form-field>
+
+      <div class="title">
+        <button
+          type="submit"
+          [disabled]="!addForm.valid"
+          class="w-20"
+          mat-raised-button
+   [color]="'primary'"
+      
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+

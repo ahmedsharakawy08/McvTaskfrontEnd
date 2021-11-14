@@ -1,0 +1,54 @@
+<app-page-template>
+  <div title class="title">
+    <label > Add Employee </label>
+  </div>
+  <div class="col-6 content" content>
+    <form [formGroup]="addForm" (submit)="AddDepartment()">
+      <mat-form-field  class="col-6" style="color:black"[appearance]="'outline'">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="Name" placeholder="Name" />
+        <mat-error>Name is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field   class="col-6" style="color:black"[appearance]="'outline'">
+        <mat-label>Employee number</mat-label>
+        <input matInput formControlName="EmpNumber" placeholder="Employee Number" />
+        <mat-error>Employee number is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field   class="col-6" style="color:black"[appearance]="'outline'">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="Title" placeholder="Title" />
+        <mat-error>Title is required</mat-error>
+      </mat-form-field>
+
+ 
+
+    
+      <mat-form-field class="col-lg-6" [appearance]="'outline'">
+        <mat-label>Department</mat-label>
+        <mat-select formControlName="DeptId">
+          <mat-option *ngFor="let Department of Departments"  [value]="Department.id">{{
+            Department.name
+          }}</mat-option>
+        </mat-select>
+    
+      </mat-form-field>
+
+      <div class="title">
+        <button
+          type="submit"
+          [disabled]="!addForm.valid"
+          class="w-20"
+          mat-raised-button
+          [color]="'primary'"
+        
+      
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+
+</app-page-template>
